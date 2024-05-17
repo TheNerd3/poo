@@ -79,7 +79,7 @@ Ejercicio 14:
 * Formulario tendrá QLabels y QLineEdits para Legajo, Nombre y Apellido, y un QPushButton
 * Si la clave ingresada es admin:1111, se cierra Login y se muestra Formulario
 * Si se ingresa otra clave se borrará el texto del QLineEdit de la clave.
-  ------
+------
 Continuacion:
 * Publicar en la ventana de Login, la temperatura actual en la Ciudad de Córdoba. Usar alguna API disponible.
 * Agregar un método en Login que permita mostrar u ocultar la información de la temperatura.
