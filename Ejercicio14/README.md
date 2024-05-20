@@ -74,4 +74,3 @@ ________________________________________________________________________________
 .. code-block:: c	
 	
 	void signal_usuarioValidado( QString usuario ); 
-
