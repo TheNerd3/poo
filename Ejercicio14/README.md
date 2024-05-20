@@ -21,34 +21,35 @@ ________________________________________________________________________________
 __________________________________________________________________________________
 * Este ejercicio viene de la clase 5, 7, 8 y 12.
 * Implementar en AdminDB el uso de MD5 para las claves de los usuarios.
-* Acondicionar para que el método utilizado sea el siguiente:
-'''
-/**
- * Si el usuario y clave son crrectas, este metodo devuelve el nombre y 
- * apellido en un QStringList.             
- */
-QStringList AdminDB::validarUsuario( QString tabla, QString usuario, QString clave )  {
+* Acondicionar para que el método utilizado sea el siguiente:            
+.. code-block:: c	
+	
+	/**
+	 * Si el usuario y clave son crrectas, este metodo devuelve el nombre y 
+	 * apellido en un QStringList.	           
+	 */
+	QStringList AdminDB::validarUsuario( QString tabla,	QString usuario, QString clave )  {
 
-    QStringList datosPersonales;
+	    QStringList datosPersonales;
 
-    if ( ! db.isOpen() ) 
-        return datosPersonales;
+	    if ( ! db.isOpen() ) 
+	        return datosPersonales;
 
-    QSqlQuery * query = new QSqlQuery( db );
-    QString claveMd5 = QCryptographicHash::hash( clave.toUtf8(), 
-                                                 QCryptographicHash::Md5 ).toHex();
+	    QSqlQuery * query = new QSqlQuery( db );
+	    QString claveMd5 = QCryptographicHash::hash( clave.toUtf8(), 
+	                                                 QCryptographicHash::Md5 ).toHex();
 
-    query->exec( "SELECT nombre, apellido FROM " +
-                 tabla + " WHERE usuario = '" + usuario +
-                 "' AND clave = '" + claveMd5 + "'" );
+	    query->exec( "SELECT nombre, apellido FROM " +
+	                 tabla + " WHERE usuario = '" + usuario +
+	                 "' AND clave = '" + claveMd5 + "'" );
+	
+	    while( query->next() )  {
+	        QSqlRecord registro = query->record();
 
-    while( query->next() )  {
-        QSqlRecord registro = query->record();
+	        datosPersonales << query->value( registro.indexOf( "nombre" ) ).toString();
+	        datosPersonales << query->value( registro.indexOf( "apellido" ) ).toString();
+	    }
 
-        datosPersonales << query->value( registro.indexOf( "nombre" ) ).toString();
-        datosPersonales << query->value( registro.indexOf( "apellido" ) ).toString();
-    }
+	    return datosPersonales;
+	} 
 
-    return datosPersonales;
-} 
-'''
