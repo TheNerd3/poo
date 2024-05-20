@@ -22,7 +22,7 @@ ________________________________________________________________________________
 * Este ejercicio viene de la clase 5, 7, 8 y 12.
 * Implementar en AdminDB el uso de MD5 para las claves de los usuarios.
 * Acondicionar para que el método utilizado sea el siguiente:
-"""
+'''
 /**
  * Si el usuario y clave son crrectas, este metodo devuelve el nombre y 
  * apellido en un QStringList.             
@@ -51,4 +51,4 @@ QStringList AdminDB::validarUsuario( QString tabla, QString usuario, QString cla
 
     return datosPersonales;
 } 
-"""
+'''
