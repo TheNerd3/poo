@@ -17,7 +17,7 @@ Ejercicio 20:
 - Abrir el designer de Ventana y agregar 5 botones (objetos de la clase Boton). Promocionarlos
 - Que esta Ventana con botones quede lo más parecido a la siguiente imagen:
 
-.. figure:: imagenes/botones.png
+![Uploading image.png…]()
 
 - Usar para Ventana grid layout, usar espaciadores y usar todos los recursos posibles del QtDesigner
 - Dibujar un fondo agradable con paintEvent y drawImage
