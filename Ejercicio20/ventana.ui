@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ventana</class>
+ <widget class="QWidget" name="Ventana">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ventana</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>120</y>
+     <width>421</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="GRID">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="Boton" name="bt1">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Mi dentista</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="Boton" name="bt3">
+      <property name="text">
+       <string>Tecnicas de higiene</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="Boton" name="bt5">
+      <property name="text">
+       <string>Hora de cepillarse </string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="Boton" name="bt4">
+      <property name="text">
+       <string>Mi boca</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="Boton" name="bt2">
+      <property name="text">
+       <string>Visitas</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Boton</class>
+   <extends>QPushButton</extends>
+   <header location="global">boton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
