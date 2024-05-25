@@ -16,7 +16,7 @@ public:
     ~Ventana();
 
 protected:
-    void paintEvent(QPaintEvent *event) override;  // Declaración de paintEvent
+    void paintEvent(QPaintEvent *event) override; 
 
 private:
     Ui::Ventana *ui;
